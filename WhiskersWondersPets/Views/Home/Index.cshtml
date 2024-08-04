@@ -1,0 +1,123 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+
+        <div class="py-24 mt-24 mx-auto max-w-2xl sm:py-48 lg:py-24">
+
+            <div class="text-center">
+                <h1 class="text-gray-900 text-4xl font-bold tracking-tight sm:text-6xl">Welcome to Whisker's Wonders Petshop</h1>
+                <p class="mt-6 text-gray-600 text-lg leading-8">An non profit animal shelter and a pet store, and a wonderful home for any kind of animal! come and join us to find a fairy pet to bring home today</p>
+                <div class="mt-10 gap-x-6 flex items-center justify-center">
+                    <a href="#" class="bg-blue-700 px-3.5 py-2.5 text-white rounded-md text-sm font-semibold shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Find a friend</a>
+                    <a href="#" class="text-gray-900 text-sm font-semibold leading-6">Contact info <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+
+            <div class="mt-6 hidden sm:mb-8 sm:flex sm:justify-center">
+                <div class="px-3 py-1 text-gray-600 ring-gray-900/10 relative rounded-full text-sm leading-6 ring-1 hover:ring-gray-900/20">
+                    To help the shelter with donation. <a href="#" class="text-blue-600 font-semibold"><span class="inset-0 absolute" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        @if (ViewBag.isLoaded)
+        {
+            <div class="grid-row-3 py-10 mx-auto max-w-2xl md:gap-y-8 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8">
+                <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                    <img src=@ViewBag.List[0].PictureName alt="Picture of a Dog" class="h-full w-full object-cover object-center">
+                </div>
+
+                <div class="grid-row-3 gap-y-3 col-span-2">
+                        <div>
+                            <h1 class="text-4xl lg:border-gray-200">@ViewBag.List[0].Name</h1>
+                        </div>
+
+                        <div class="mt-2 flex items-center">
+                            <!-- Active: "text-gray-900", Default: "text-gray-200" -->
+                            <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-200 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+
+                        <div class="space-y-6 mt-2 col-span-2">
+                            <p class="text-gray-900 text-base">Age: @ViewBag.List[0].Age
+                            <br/>
+                            @ViewBag.List[0].Description
+                            </p>
+                        </div>
+                </div>
+
+            </div>
+        }
+        @if (ViewBag.isLoaded)
+        {
+            <div class="grid-row-3 py-10 mt-8 mx-auto max-w-2xl md:gap-y-8 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8">
+
+                <div class="grid-row-3 gap-y-3 col-span-2">
+                    <div>
+                        <h1 class="text-4xl lg:border-gray-200">@ViewBag.List[1].Name</h1>
+                    </div>
+
+                    <div class="mt-2 flex items-center">
+                        <!-- Active: "text-gray-900", Default: "text-gray-200" -->
+                        <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-200 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <div class="space-y-6 mt-2 col-span-2">
+                        <p class="text-gray-900 text-base">
+                            Age: @ViewBag.List[1].Age
+                            <br />
+                            @ViewBag.List[1].Description
+                        </p>
+                    </div>
+                </div>
+                <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                    <img src=@ViewBag.List[1].PictureName alt="Picture of a Cat" class="h-full w-full object-cover object-center">
+                </div>
+            </div>
+        }
+
+        <div class="mt-12 mx-auto max-w-7xl items-center text-center">
+            <h1 class="text-gray-900 mb-6 text-6xl font-bold tracking-tight">Our Location</h1>
+            <iframe class="rounded-lg" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1703.4988969286644!2d-118.04935621757178!3d33.94094460903795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1722061490602!5m2!1sen!2sil" width="1280" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+    </body>
+</html>

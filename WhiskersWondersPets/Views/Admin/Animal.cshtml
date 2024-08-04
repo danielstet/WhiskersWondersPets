@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "Animal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WhiskersWondersPets.Models.Animal
+
+
+<html>
+<head>
+
+</head>
+<body>
+    <div class="">
+        <div class="mb-1 mt-24 mx-auto max-w-2xl text-center">
+            <h1 class="text-gray-900 text-4xl font-bold tracking-tight sm:text-6xl">Edit Animal</h1>
+        </div>
+        <form asp-action="UpdateAnimal" asp-controller="Admin" id="form" enctype="multipart/form-data" method="post">
+            <div class="mt-6 gap-4 mx-auto grid max-w-6xl grid-cols-3 items-stretch">
+                <div>
+                    <img src="~/@Model.PictureName"/>
+                </div>
+                <div class="grid grid-rows-5">
+                    <div class="min-h-20">
+                        <div id="animal_id_parent" class="relative">
+                            <input name="animalId" type="text" id="animal_id" class="px-2.5 pb-2.5 pt-4 text-gray-900 bg-transparent border-1 border-gray-300 peer block w-full appearance-none rounded-lg text-sm focus:outline-none focus:ring-0 focus:border-blue-600" asp-for="AnimalId" readonly />
+                            <label id="animal_id_label" class="text-gray-500 -translate-y-4 top-2 origin-[0] bg-white px-2 start-1 absolute z-10 scale-75 transform text-sm duration-300 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Animal Id</label>
+                        </div>
+                        <div class="error px-2.5 text-red-500 mt-1 text-xs"></div>
+                    </div>
+                    <div class="min-h-20">
+                        <div id="animal_name_parent" class="relative">
+                            <input name="animalName" type="text" id="animal_name" class="px-2.5 pb-2.5 pt-4 text-gray-900 bg-transparent border-1 border-gray-300 peer block w-full appearance-none rounded-lg text-sm focus:outline-none focus:ring-0 focus:border-blue-600" asp-for="Name" placeholder="Cat" />
+                            <label id="animal_name_label" class="text-gray-500 -translate-y-4 top-2 origin-[0] bg-white px-2 start-1 absolute z-10 scale-75 transform text-sm duration-300 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Animal Name</label>
+                        </div>
+                        <div class="error px-2.5 text-red-500 mt-1 text-xs"></div>
+                    </div>
+                    <div class="min-h-20">
+                        <div id="animal_age_parent" class="relative">
+                            <input name="animalAge" type="text" id="animal_age" class="px-2.5 pb-2.5 pt-4 text-gray-900 bg-transparent border-1 border-gray-300 peer block w-full appearance-none rounded-lg text-sm focus:outline-none focus:ring-0 focus:border-blue-600" asp-for="Age" placeholder="8" />
+                            <label id="animal_age_label" class="text-gray-500 -translate-y-4 top-2 origin-[0] bg-white px-2 start-1 absolute z-10 scale-75 transform text-sm duration-300 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Animal Age</label>
+                        </div>
+                        <div class="error px-2.5 text-red-500 mt-1 text-xs"></div>
+                    </div>
+                    <div>
+                        <p class="px-2.5 mb-1 text-sm">Upload an Image of the animal</p>
+                        <div id="animal_picture_parent" class="h-14">
+                            <input id="animal_picture" name="pictureName" class="text-gray-900 border-gray-300 bg-gray-50 block w-full cursor-pointer rounded-lg border text-sm focus:outline-none" type="file">
+                        </div>
+                    </div>
+                    <div class="h-14">
+                        <select name="category" class="bg-gray-50 border-gray-300 text-gray-900 p-2.5 h-12 block w-full rounded-lg border text-6xl text-sm focus:ring-blue-500 focus:border-blue-500" asp-for="CategoryId">
+                            @{
+                                int categoryLength = ViewBag.CategoriesListLength;
+                            }
+                            @for (int i = 0; i < categoryLength; i++)
+                            {
+                                <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div id="animal_desc_border" class="border-gray-200 bg-gray-50 h-72 w-full rounded-lg border">
+                        <div id="animal_desc_parent" class="px-4 py-2 bg-white h-4/5 rounded-t-lg">
+                            <label for="comment" class="sr-only">Your description</label>
+                            <textarea id="animal_desc" name="description" rows="10" class="px-0 text-gray-900 bg-white w-full border-0 text-sm focus:ring-0" placeholder="Add description..." asp-for="Description"></textarea>
+                        </div>
+                        <div class="px-3 py-2 flex items-center justify-between justify-items-end border-t">
+                            <button id="animal_submit_btn" type="submit" class="py-2.5 px-4 text-white bg-blue-700 inline-flex items-center rounded-lg text-center text-xs font-medium hover:bg-blue-800 focus:ring-4 focus:ring-blue-200">
+                                Update Animal
+                            </button>
+                        </div>
+                        <div class="error px-2.5 text-red-500 mt-1 mt-2 text-xs"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        @* 
+        @for (int i = 0; i < ViewBag.CommentsListLength; i++)
+        {
+            <a class="p-6 bg-white border-gray-200 block justify-stretch rounded-lg border shadow hover:bg-gray-100">
+                <p class="text-gray-700 font-normal">@ViewBag.CommentsList[i].UserComment</p>
+            </a>
+        } *@
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
