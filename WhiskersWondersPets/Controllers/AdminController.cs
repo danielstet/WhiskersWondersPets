@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WhiskersWondersPets.Models;
 using WhiskersWondersPets.Repository;
 
 namespace WhiskersWondersPets.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private IRepository _animalRepository;
@@ -40,55 +42,9 @@ namespace WhiskersWondersPets.Controllers
             {
                 Console.WriteLine(err);
                 return Content("Something went wrong");
-            }
-            
+            }            
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Index(string animalName, string animalAge, IFormFile pictureName, string description, string category)
-        {
-            if (pictureName != null && pictureName.Length > 0)
-            {
-                string RandomNums = Guid.NewGuid().ToString();
-                string PhotoNewName = $"{RandomNums.Remove(16)}_{pictureName.FileName}";
-                // Save file to a directory or handle it
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", PhotoNewName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await pictureName.CopyToAsync(stream);
-                }
-                filePath = Path.Combine("images", PhotoNewName);
-
-                try
-                {
-                    _animalRepository.InsertAnimal(animalName, animalAge, filePath, description, category);
-                }
-                catch (Exception err)
-                {
-                    Console.WriteLine(err);
-                }
-            }
-
-            return RedirectToAction("Index");
-        }
-
-
-        [HttpDelete]
-        public IActionResult DeleteAnimal(int id)
-        {
-            try
-            {
-                _animalRepository.DeleteAnimal(id);
-                return RedirectToAction("Index");
-
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err);
-                return Content("Error, something went wrong");
-            }
-        }
 
         [HttpGet]
         public IActionResult Animal(int id)
@@ -113,9 +69,84 @@ namespace WhiskersWondersPets.Controllers
             catch (Exception err)
             {
                 Console.WriteLine(err);
+                return RedirectToAction("PageNotFound", "Catalog");
+            }
+
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string animalName, string animalAge, IFormFile pictureName, string description, string category)
+        {
+            bool valid = validateAnimal(animalName,animalAge,pictureName,description,category);
+            if (pictureName != null && pictureName.Length > 0 && valid)
+            {
+                string RandomNums = Guid.NewGuid().ToString();
+                string PhotoNewName = $"{RandomNums.Remove(16)}_{pictureName.FileName}";
+                // Save file to a directory or handle it
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", PhotoNewName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await pictureName.CopyToAsync(stream);
+                }
+                filePath = Path.Combine("images", PhotoNewName);
+
+                try
+                {
+                    _animalRepository.InsertAnimal(animalName, animalAge, filePath, description, category);
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err);
+                    return StatusCode(500);
+                }
+            }
+            return StatusCode(200);
+            //return RedirectToAction("Index");
+        }
+
+        private bool validateAnimal( string animalName, string animalAge, IFormFile formFile, string description, string category)
+        {
+            int.TryParse(category, out int categoryId);
+            int.TryParse(animalAge, out int Age);
+            int categoriesNum = _animalRepository.GetCategories().ToList().Count();
+            bool Valid = true;
+            if (string.IsNullOrWhiteSpace(animalName)) { Valid = false; }
+            else if (string.IsNullOrWhiteSpace(animalAge) || Age <= 0) { Valid = false; }
+            else if (formFile == null || formFile.FileName.Contains("exe")) { Valid = false; }
+            else if (description == null || description.Length == 0) { Valid = false; }
+            else if (categoryId < 0 || categoryId > categoriesNum) { Valid = false; }
+            return Valid;
+        }
+
+        
+        public IActionResult DeleteAnimal(int id)
+        {
+            try
+            {
+                _animalRepository.DeleteAnimal(id);
+                return RedirectToAction("Index");
+
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err);
                 return Content("Error, something went wrong");
             }
-            
+        }
+
+        public IActionResult DeleteComment(int id, int AnimalId) {
+            try
+            {
+                _animalRepository.DeleteComment(id);
+                return RedirectToAction(actionName: "Animal", new { id = AnimalId });
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err);
+                return Content("Error, something went wrong");
+            }
         }
 
         // Maybe make Animal HttpPost instead

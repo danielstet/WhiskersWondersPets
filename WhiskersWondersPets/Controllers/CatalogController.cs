@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 using WhiskersWondersPets.Models;
 using WhiskersWondersPets.Repository;
 
@@ -11,6 +12,7 @@ namespace WhiskersWondersPets.Controllers
         {
             _animalRepository = animalRepository;
         }
+
         public IActionResult Index(int? CategoryNumber = 0)
         {
             try
@@ -25,10 +27,16 @@ namespace WhiskersWondersPets.Controllers
                     animals = _animalRepository.GetAnimals().Where(a => a.CategoryId.Equals(CategoryNumber)).ToList();
                 }
                 List<Category> categories = _animalRepository.GetCategories().ToList();
+                Category All = new Category() {
+                    CategoryId = 0,
+                    Name = "All"
+                };
+                categories.Add(All);
                 ViewBag.animalListLength = animals.Count;
                 ViewBag.CategoriesListLength = categories.Count;
                 ViewBag.AnimalsList = animals;
                 ViewBag.CategoriesList = categories;
+                ViewBag.CategoryNumber = CategoryNumber;
                 return View();
             }
             catch (Exception err)
@@ -54,7 +62,7 @@ namespace WhiskersWondersPets.Controllers
             catch (Exception err)
             {
                 Console.WriteLine(err);
-                return RedirectToAction("Index");
+                return RedirectToAction("PageNotFound");
             }
         }
 
@@ -72,5 +80,10 @@ namespace WhiskersWondersPets.Controllers
                 return Content("Somethinw went wrong");
             }
         }
+
+        public IActionResult PageNotFound() {
+            return View(); 
+        }
+
     }
 }

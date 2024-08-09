@@ -10,12 +10,27 @@
     <div>
         <nav class="bg-white top-0 start-0 border-gray-200 fixed z-20 w-full border-b dark:bg-gray-900 dark:border-gray-600">
             <div class="p-4 mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-               @*  <a href="https://flowbite.com/" class="space-x-3 flex items-center rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
-                    <span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Flowbite</span>
-                </a> *@
+                <a class="min-w-44">
+                    <svg class="h-8" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5l0 1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3l0-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z" /></svg>
+                </a>
                 <div class="space-x-3 flex rtl:space-x-reverse md:order-2 md:space-x-0">
-                    <button type="button" class="text-white bg-blue-700 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+                    @if (User.Identity!.IsAuthenticated)
+                    {
+                        <div class="min-w-44 flex">
+                            <a asp-action="Logout" asp-controller="Account" class="text-white bg-red-700 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Logout</a>
+                            <div class="grid grid-cols-2 items-center">
+                                <div class="ml-6">
+                                    <svg class="h-4 w-4" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" /></svg>
+                                </div>
+                                <p class="ml-1 text-white text-md font-medium">@User.Identity!.Name</p>
+                            </div>
+                        </div>
+                    }else
+                    {
+                        <div class="min-w-44">
+                            <a asp-action="Login" asp-controller="Account" class="text-white bg-blue-700 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</a>
+                        </div>
+                    }
                     <button data-collapse-toggle="navbar-sticky" type="button" class="p-2 w-10 h-10 text-gray-500 inline-flex items-center justify-center rounded-lg text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 md:hidden dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -46,5 +61,6 @@
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ namespace WhiskersWondersPets.Repository
 
         public void DeleteComment(int id)
         {
-            var comment = _animalsDBContext.Comments!.Single(c => c.Equals(id));
+            var comment = _animalsDBContext.Comments!.Single(c => c.CommentId.Equals(id));
             _animalsDBContext.Comments!.Remove(comment);
             _animalsDBContext.SaveChanges();
         }
@@ -48,7 +48,7 @@ namespace WhiskersWondersPets.Repository
             }
             catch (Exception)
             {
-                return null;
+                return null!;
             }
         }
 
