@@ -43,12 +43,11 @@ namespace WhiskersWondersPets.Repository
         {
             try
             {
-                ICollection<Animal> MostPopular = _animalsDBContext.Animals!.OrderByDescending(a => a.Comments!.Count).ToList().GetRange(0, 2);
+                ICollection<Animal> MostPopular = _animalsDBContext.Animals!.OrderByDescending(a => a.Comments!.Count).Take(2).ToList();
                 return MostPopular;
             }
             catch (Exception)
             {
-
                 return null;
             }
         }
@@ -77,8 +76,6 @@ namespace WhiskersWondersPets.Repository
                 Description = description,
                 CategoryId = categoryId
             };
-
-
             _animalsDBContext.Add(animal);
             _animalsDBContext.SaveChanges();
         }
