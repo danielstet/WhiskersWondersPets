@@ -7,7 +7,7 @@
 
 <html>
     <head>
-        @* <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" /> *@
+       @*  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" /> *@
     </head>
     <body>
         <div class="mb-1 mt-24 mx-auto max-w-2xl text-center">
@@ -42,9 +42,10 @@
                     </div>
                     <div class="h-14">
                         <select asp-for=CategoryId name="category" class="bg-gray-50 border-gray-300 text-gray-900 p-2.5 h-12 block w-full rounded-lg border text-6xl text-sm focus:ring-blue-500 focus:border-blue-500">
-                            @{
-                                int categoryLength = ViewBag.CategoriesListLength;
-                            }
+                        @{
+                            int categoryLength = ViewBag.CategoriesListLength;
+                            categoryLength--;
+                        }
                             @for (int i = 0; i < categoryLength; i++)
                             {
                                 <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
@@ -72,16 +73,24 @@
 
         <div>
         <div class="mt-10">
-            <form asp-controller="Admin" asp-action="Index" method="post" class="max-h-12 gap-6 mx-auto flex max-w-xl flex-row place-items-center">
+            <form asp-controller="Admin" asp-action="Index" method="get" class="max-h-12 gap-6 mx-auto flex max-w-xl flex-row place-items-center">
                 <h1 class="mb-2 text-gray-900 basis-1/2 text-center text-3xl dark:text-gray-700">Search by Category</h1>
                 <select name="CategoryNumber" class="bg-gray-50 border-gray-300 text-gray-900 p-2.5 block w-full basis-1/3 rounded-lg border text-6xl text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option value="0">All</option>
                     @{
-                        int categoryLength = ViewBag.CategoriesListLength;
+                        // int categoryLength = ViewBag.CategoriesListLength;
+                        var CategoryNumber = ViewBag.CategoryNumber;
                     }
-                    @for (int i = 0; i < categoryLength; i++)
+
+                    @for (int i = 0; i < (int)ViewBag.CategoriesListLength; i++)
                     {
-                        <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
+                        if (CategoryNumber.Equals(ViewBag.CategoriesList[i].CategoryId))
+                        {
+                            <option value="@ViewBag.CategoriesList[i].CategoryId" selected>@ViewBag.CategoriesList[i].Name</option>
+                        }
+                        else
+                        {
+                            <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
+                        }
                     }
                 </select>
                 <button as type="submit" class="text-white bg-blue-700 px-6 py-3 basis-1/6 rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
@@ -119,7 +128,7 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
                         </a>
-                        <a asp-action="DeleteAnimal" asp-route-id="@ViewBag.AnimalsList[i].AnimalId" class="px-3 py-2 text-white bg-red-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                        <a id="deleteAction" onclick="deleteAnimal(@ViewBag.AnimalsList[i].AnimalId)" class="px-3 py-2 text-white bg-red-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
                             Delete Animal
                             <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -134,5 +143,6 @@
         <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
         @* <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script> *@
         <script src="~/scripts/AnimalCreate.js"></script>
+        <script src="~/scripts/DeleteAnimal.js"></script>
     </body>
 </html>

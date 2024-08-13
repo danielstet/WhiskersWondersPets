@@ -1,6 +1,6 @@
-﻿
+﻿@model WhiskersWondersPets.Models.Animal
 @{
-    ViewData["Title"] = "Animal";
+    ViewData["Title"] = "Animal2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,69 +9,72 @@
 
     </head>
     <body>
-    <div class="grid-row-3 py-10 mt-36 mx-auto max-w-2xl md:gap-y-8 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8">
-        <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-            <img src="~/@ViewBag.Animal.PictureName" alt="Profile Picture of an animal" class="h-full w-full object-cover object-center">
-        </div>
-
-        <div class="grid-row-3 gap-y-3 col-span-2">
-            <div>
-                <h1 class="text-4xl lg:border-gray-200">@ViewBag.Animal.Name</h1>
+        <div class="grid-row-3 py-10 mt-36 mx-auto max-w-2xl md:gap-y-8 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8">
+            <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                <img src="~/@Model.PictureName" alt="Profile Picture of an animal" class="h-full w-full object-cover object-center">
             </div>
 
-            <div class="mt-2 flex items-center">
-                <!-- Active: "text-gray-900", Default: "text-gray-200" -->
-                <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                </svg>
-                <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                </svg>
-                <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                </svg>
-                <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                </svg>
-                <svg class="h-5 w-5 text-gray-200 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                </svg>
-            </div>
-
-            <div class="space-y-6 mt-2 col-span-2">
-                <p class="text-gray-900 text-base">
-                    Age: @ViewBag.Animal.Age
-                    <br />
-                    @ViewBag.Animal.Description
-                </p>
-            </div>
-            
-            @* Comment section *@
-            <form asp-controller="Catalog" asp-action="AddCommnet" asp-route-id="@ViewBag.Animal.AnimalId" method="post">
-                <div class="mt-8 mb-4 border-gray-200 bg-gray-50 w-full rounded-lg border">
-                    <div class="px-4 py-2 bg-white rounded-t-lg">
-                        <label  for="comment" class="sr-only">Your comment</label>
-                        <textarea name="NewComment" id="comment" rows="4" class="px-0 text-gray-900 bg-white w-full border-0 text-sm focus:ring-0" placeholder="Write a comment..." required></textarea>
-                    </div>
-                    <div class="px-3 py-2 flex items-center justify-between border-t">
-                        <button type="submit" class="py-2.5 px-4 text-white bg-blue-700 inline-flex items-center rounded-lg text-center text-xs font-medium hover:bg-blue-800 focus:ring-4 focus:ring-blue-200">
-                            Post comment
-                        </button>
-                       
-                    </div>
+            <div class="grid-row-3 gap-y-3 col-span-2">
+                <div>
+                    <h1 class="text-4xl lg:border-gray-200">@Model.Name</h1>
                 </div>
-            </form>
-            <p class="text-gray-500 ms-auto text-xs dark:text-gray-400">Remember, contributions to this topic should follow our <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">Community Guidelines</a>.</p>
+
+                <div class="mt-2 flex items-center">
+                    <!-- Active: "text-gray-900", Default: "text-gray-200" -->
+                    <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                    <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                    <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                    <svg class="h-5 w-5 text-gray-900 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                    <svg class="h-5 w-5 text-gray-200 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+
+                <div class="space-y-6 mt-2 col-span-2">
+                    <p class="text-gray-900 text-base">
+                        Age: @Model.Age
+                        <br />
+                        @Model.Description
+                    </p>
+                </div>
+
+                @* Comment section *@
+                <form id="form" asp-controller="Catalog" asp-action="AddCommnet"  method="post">
+                <input name="id" type="text" value="@Model.AnimalId" hidden/>
+                    <div class="mt-8 mb-4 border-gray-200 bg-gray-50 w-full rounded-lg border">
+                        <div class="px-4 py-2 bg-white rounded-t-lg">
+                            <label for="comment" class="sr-only">Your comment</label>
+                            <textarea name="NewComment" id="comment" rows="4" class="px-0 text-gray-900 bg-white w-full border-0 text-sm focus:ring-0" placeholder="Write a comment..." required></textarea>
+                        </div>
+                        <div class="px-3 py-2 flex items-center justify-between border-t">
+                            <button type="submit" class="py-2.5 px-4 text-white bg-blue-700 inline-flex items-center rounded-lg text-center text-xs font-medium hover:bg-blue-800 focus:ring-4 focus:ring-blue-200">
+                                Post comment
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-gray-500 ms-auto text-xs dark:text-gray-400">Remember, contributions to this topic should follow our <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">Community Guidelines</a>.</p>
+            </div>
+
+            @for (int i = 0; i < ViewBag.CommentsListLength; i++)
+            {
+                <a class="p-6 bg-white border-gray-200 block justify-stretch rounded-lg border shadow hover:bg-gray-100">
+                    <p class="text-gray-700 font-normal">@ViewBag.CommentsList[i].UserComment</p>
+                </a>
+            }
+
         </div>
 
-        @for (int i = 0; i < ViewBag.CommentsListLength; i++)
-        {
-            <a class="p-6 bg-white border-gray-200 block justify-stretch rounded-lg border shadow hover:bg-gray-100">
-                <p class="text-gray-700 font-normal">@ViewBag.CommentsList[i].UserComment</p>
-            </a>
-        }
+        <script src="~/scripts/AddComment.js"></script>
 
-    </div>
-        <script src="https://cdn.tailwindcss.com"></script>
     </body>
 </html>
+

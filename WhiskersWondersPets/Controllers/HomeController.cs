@@ -25,7 +25,7 @@ namespace WhiskersWondersPets.Controllers
                 bool isLoaded = true;
                 ViewBag.MostPopular1 = MostPopular[0];
                 ViewBag.MostPopular2 = MostPopular[1];
-                ViewBag.List = MostPopular;
+                ViewBag.List = MostPopular; // Why?
                 ViewBag.isLoaded = isLoaded;
                 return View();
             }

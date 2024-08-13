@@ -8,10 +8,14 @@ namespace WhiskersWondersPets.Controllers
     public class CatalogController : Controller
     {
         private IRepository _animalRepository;
-        public CatalogController(IRepository animalRepository)
+        private readonly ILogger _logger;
+        public CatalogController(IRepository animalRepository, ILogger<CatalogController> logger)
         {
             _animalRepository = animalRepository;
+            _logger = logger;
+            _logger.LogDebug("Nlog is intergrated to Catalog Controller");
         }
+
 
         public IActionResult Index(int? CategoryNumber = 0)
         {
@@ -41,43 +45,48 @@ namespace WhiskersWondersPets.Controllers
             }
             catch (Exception err)
             {
-                Console.WriteLine(err);
-                return Content("Somethinw went wrong");
+                _logger.LogError(err.Message);
+                return RedirectToAction("Index", "Home");
             }
         }
 
-        public IActionResult Animal(int id) {
+        // Ask for help!
+        public IActionResult Animal(int id)
+        {
             try
             {
                 Animal animal = _animalRepository.GetAnimal(id);
-                ViewBag.Animal = animal;
-
                 List<Comment> comments = animal.Comments!.ToList();
                 ViewBag.CommentsList = comments;
-
                 int CommentsListLength = comments.Count;
                 ViewBag.CommentsListLength = CommentsListLength;
-                return View();
+                return View(animal);
             }
             catch (Exception err)
             {
-                Console.WriteLine(err);
+                _logger.LogError(err.Message);
                 return RedirectToAction("PageNotFound");
             }
         }
 
-        public IActionResult AddCommnet(int id, string NewComment) {
+
+        public IActionResult AddCommnet(int id, string NewComment)
+        {
             try
             {
+                if (string.IsNullOrWhiteSpace(NewComment))
+                    throw new Exception("Comment was null");
+
                 var animal = _animalRepository.GetAnimal(id);
                 _animalRepository.InsertComment(animal, NewComment);
-                string URL = $"/Catalog/Animal?id={animal.AnimalId}";
-                return Redirect(URL);
+                int AnimalId = animal.AnimalId;
+                return StatusCode(200);
+          
             }
             catch (Exception err)
             {
-                Console.WriteLine(err);
-                return Content("Somethinw went wrong");
+                _logger.LogError(err.Message);
+                return StatusCode(500);
             }
         }
 

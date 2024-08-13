@@ -20,10 +20,6 @@ namespace WhiskersWondersPets.Controllers
         {
             try
             {
-                List<Category> categories = _animalRepository.GetCategories().ToList();
-                ViewBag.CategoriesListLength = categories.Count;
-                ViewBag.CategoriesList = categories;
-
                 List<Animal> animals = new List<Animal>();
                 if (CategoryNumber == 0)
                 {
@@ -33,16 +29,27 @@ namespace WhiskersWondersPets.Controllers
                 {
                     animals = _animalRepository.GetAnimals().Where(a => a.CategoryId.Equals(CategoryNumber)).ToList();
                 }
+                List<Category> categories = _animalRepository.GetCategories().ToList();
+                Category All = new Category()
+                {
+                    CategoryId = 0,
+                    Name = "All"
+                };
+                categories.Add(All);
                 ViewBag.animalListLength = animals.Count;
+                ViewBag.CategoriesListLength = categories.Count;
                 ViewBag.AnimalsList = animals;
-
+                ViewBag.CategoriesList = categories;
+                ViewBag.CategoryNumber = CategoryNumber;
                 return View();
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                Console.WriteLine(err);
-                return Content("Something went wrong");
-            }            
+                // Should I Log it?
+                // In what scenario can it even get exception? DataBase problems maybe?
+
+               return RedirectToAction("Index", "Home");
+            }
         }
 
 
@@ -66,9 +73,8 @@ namespace WhiskersWondersPets.Controllers
 
                 return View(animal);
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                Console.WriteLine(err);
                 return RedirectToAction("PageNotFound", "Catalog");
             }
 
@@ -103,7 +109,6 @@ namespace WhiskersWondersPets.Controllers
                 }
             }
             return StatusCode(200);
-            //return RedirectToAction("Index");
         }
 
         private bool validateAnimal( string animalName, string animalAge, IFormFile formFile, string description, string category)
@@ -120,19 +125,17 @@ namespace WhiskersWondersPets.Controllers
             return Valid;
         }
 
-        
+
         public IActionResult DeleteAnimal(int id)
         {
             try
             {
                 _animalRepository.DeleteAnimal(id);
-                return RedirectToAction("Index");
-
+                return StatusCode(200);
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                Console.WriteLine(err);
-                return Content("Error, something went wrong");
+                return StatusCode(500);
             }
         }
 
@@ -140,16 +143,15 @@ namespace WhiskersWondersPets.Controllers
             try
             {
                 _animalRepository.DeleteComment(id);
-                return RedirectToAction(actionName: "Animal", new { id = AnimalId });
+                return StatusCode(200);
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                Console.WriteLine(err);
-                return Content("Error, something went wrong");
+                return StatusCode(500);
             }
         }
 
-        // Maybe make Animal HttpPost instead
+        
         [HttpPost]
         public async Task<IActionResult> UpdateAnimal(string animalId, string animalName, string animalAge, IFormFile pictureName, string description, string category)
         {
@@ -177,12 +179,12 @@ namespace WhiskersWondersPets.Controllers
                     filePath = animal.PictureName;
                 }
                 _animalRepository.UpdateAnimal(id, animalName, animalAge, filePath, description, category);
-                return RedirectToAction("Index");
+                return StatusCode(200);
             }
             catch (Exception err)
             {
                 Console.WriteLine(err);
-                return Content("Somethinw went wrong");
+                return StatusCode(500);
             }
 
             
