@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WhiskersWondersPets.Models;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WhiskersWondersPets.Controllers
 {
@@ -26,14 +29,45 @@ namespace WhiskersWondersPets.Controllers
         public async Task<IActionResult> Login(LoginModel model)
         {
             if (ModelState.IsValid) {
-                //var user = await _userManger.FindByNameAsync(model.Username!);
-                //var res = await _signInManager.PasswordSignInAsync(user, model.Password!, false, false);
                 var result = await _signInManager.PasswordSignInAsync(model.Username!,model.Password!, false, false);
                 if (result.Succeeded) {
                    return RedirectToAction("Index", "Home");
                 }
             }
             return View();
+        }
+
+        public async Task GoogleLogin()
+        {
+            await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme,
+                new AuthenticationProperties
+                {
+                    RedirectUri = Url.Action("GoogleResponse")
+                });
+        }
+
+        public async Task<IActionResult> GoogleResponse()
+        {
+            // Authenticate the user using the cookie scheme
+            var authenticateResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+            {
+                // Handle authentication failure
+                return Unauthorized();
+            }
+
+            // Check for claims
+            var claims = authenticateResult.Principal?.Identities.FirstOrDefault()?.Claims.Select(claim => new
+            {
+                claim.Issuer,
+                claim.OriginalIssuer,
+                claim.Type,
+                claim.Value
+            });
+
+            // Return claims as JSON
+            return Json(claims);
         }
 
         public IActionResult Logout()

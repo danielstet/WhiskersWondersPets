@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using WhiskersWondersPets.Data;
@@ -14,20 +16,41 @@ logger.Debug("init main");
 try
 {
     var builder = WebApplication.CreateBuilder(args);
+    
     // NLog: Setup NLog for Dependency injection
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
-    //builder.Services.AddTransient<IRepository, MyRepository>();
     string connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"]!;
     string UsersconnectionString = builder.Configuration["ConnectionStrings:UsersConnection"]!;
-    //builder.Services.AddDbContext<DataBase>(options => options.UseSqlite(connectionString));
     builder.Services.AddDbContext<AnimalsDBContext>(options => options.UseLazyLoadingProxies().UseSqlite(connectionString));
+
     builder.Services.AddDbContext<AuthenticationContext>(options => options.UseLazyLoadingProxies().UseSqlite(UsersconnectionString));
+
     builder.Services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<AuthenticationContext>();
+
     builder.Services.AddScoped<IRepository, AnimalsRepo>();
     builder.Services.AddControllersWithViews();
+
+    //builder.Services.AddSession(options =>
+    //{
+    //    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set the timeout duration
+    //    options.Cookie.HttpOnly = true; // Set the cookie to be HttpOnly
+    //    options.Cookie.IsEssential = true; // Make the session cookie essential
+    //});
+
+    // Add google auth services
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    }).AddCookie()
+      .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+      {
+          options.ClientId = builder.Configuration["GoogleKeys:ClientId"]!;
+          options.ClientSecret = builder.Configuration["GoogleKeys:ClientSecret"]!;
+      });
 
     var app = builder.Build();
 
@@ -55,11 +78,9 @@ try
     app.UseStaticFiles();
     app.UseRouting();
     app.UseAuthorization();
+    //app.UseSession();
     app.MapControllerRoute("Default", "{controller=Home}/{action=index}");
-    //app.MapControllerRoute(
-    //    name: "account",
-    //    pattern: "Account/{action=Login}/{id?}",
-    //    defaults: new { controller = "Account", action = "Login" });
+
 
     using (var scope = app.Services.CreateScope())
     {
