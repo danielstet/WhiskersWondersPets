@@ -733,3 +733,262 @@
 2024-08-16 10:05:12.8620 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
 2024-08-16 10:05:12.8688 Info Configuration initialized.
 2024-08-16 10:05:14.1059 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:10:28.9373 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:10:28.9443 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:10:28.9443 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:10:28.9443 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:10:28.9615 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:10:28.9615 Info Configuration initialized.
+2024-08-16 10:10:29.2099 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:13:19.7788 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:13:19.7788 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:13:19.7788 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:13:19.7929 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:13:19.8038 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:13:19.8038 Info Configuration initialized.
+2024-08-16 10:13:20.0446 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:18:52.5867 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:18:52.5940 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:18:52.5940 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:18:52.6012 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:18:52.6012 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:18:52.6180 Info Configuration initialized.
+2024-08-16 10:18:52.8502 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:19:52.4898 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:19:52.4972 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:19:52.4972 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:19:52.4972 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:19:52.5159 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:19:52.5227 Info Configuration initialized.
+2024-08-16 10:19:52.7539 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:20:25.0180 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:20:25.0261 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:20:25.0261 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:20:25.0261 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:20:25.0468 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:20:25.0468 Info Configuration initialized.
+2024-08-16 10:20:25.2751 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:22:57.5225 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:22:57.5296 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:22:57.5296 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:22:57.5296 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:22:57.5493 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:22:57.5558 Info Configuration initialized.
+2024-08-16 10:22:57.7892 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:27:08.7217 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:27:08.7290 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:27:08.7290 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:27:08.7290 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:27:08.7480 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:27:08.7480 Info Configuration initialized.
+2024-08-16 10:27:08.9883 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:29:40.0651 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:29:40.0729 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:29:40.0729 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:29:40.0729 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:29:40.0925 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:29:40.0925 Info Configuration initialized.
+2024-08-16 10:29:40.3417 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:29:56.6396 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:29:56.6396 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:29:56.6396 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:29:56.6533 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:29:56.6642 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:29:56.6642 Info Configuration initialized.
+2024-08-16 10:29:56.9061 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:30:44.3169 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:30:44.3237 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:30:44.3237 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:30:44.3237 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:30:44.3792 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:30:44.3854 Info Configuration initialized.
+2024-08-16 10:30:44.6276 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:30:58.8771 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:30:58.8843 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:30:58.8843 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:30:58.8843 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:30:58.9027 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:30:58.9027 Info Configuration initialized.
+2024-08-16 10:30:59.1571 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:32:55.5131 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:32:55.5131 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:32:55.5131 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:32:55.5290 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:32:55.5474 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:32:55.5541 Info Configuration initialized.
+2024-08-16 10:32:55.7854 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:33:51.6488 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:33:51.6561 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:33:51.6561 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:33:51.6633 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:33:51.6633 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:33:51.6819 Info Configuration initialized.
+2024-08-16 10:33:51.9215 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:35:33.5237 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:35:33.5309 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:35:33.5309 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:35:33.5309 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:35:33.5478 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:35:33.5539 Info Configuration initialized.
+2024-08-16 10:35:33.8075 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:37:21.1268 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 10:37:21.1342 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 10:37:21.1342 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 10:37:21.1342 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 10:37:21.1554 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 10:37:21.1554 Info Configuration initialized.
+2024-08-16 10:37:21.3892 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:07:59.0297 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:07:59.0481 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:07:59.0481 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:07:59.0664 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:07:59.0887 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:07:59.0887 Info Configuration initialized.
+2024-08-16 11:08:00.2516 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:09:19.7265 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:09:19.7336 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:09:19.7336 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:09:19.7336 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:09:19.7511 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:09:19.7572 Info Configuration initialized.
+2024-08-16 11:09:20.0033 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:17:55.6401 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:17:55.6484 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:17:55.6484 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:17:55.6484 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:17:55.6735 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:17:55.6804 Info Configuration initialized.
+2024-08-16 11:17:55.9173 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:18:14.3958 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:18:14.4029 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:18:14.4029 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:18:14.4029 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:18:14.4213 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:18:14.4213 Info Configuration initialized.
+2024-08-16 11:18:14.6747 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:19:28.6615 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:19:28.6694 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:19:28.6694 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:19:28.6812 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:19:28.6969 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:19:28.6969 Info Configuration initialized.
+2024-08-16 11:19:28.9313 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:19:51.9241 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:19:51.9312 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:19:51.9312 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:19:51.9312 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:19:51.9491 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:19:51.9491 Info Configuration initialized.
+2024-08-16 11:19:52.1985 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:20:04.6832 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:20:04.6832 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:20:04.6832 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:20:04.6972 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:20:04.6972 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:20:04.7140 Info Configuration initialized.
+2024-08-16 11:20:04.9929 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:20:49.7105 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:20:49.7180 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:20:49.7180 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:20:49.7251 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:20:49.7251 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:20:49.7433 Info Configuration initialized.
+2024-08-16 11:20:49.9919 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:23:03.8078 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:23:03.8078 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:23:03.8078 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:23:03.8227 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:23:03.8343 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:23:03.8343 Info Configuration initialized.
+2024-08-16 11:23:04.0928 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:23:42.7747 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:23:42.7820 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:23:42.7820 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:23:42.7889 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:23:42.7889 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:23:42.8060 Info Configuration initialized.
+2024-08-16 11:23:43.0593 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:24:37.3704 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:24:37.3704 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:24:37.3704 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:24:37.3839 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:24:37.3839 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:24:37.4011 Info Configuration initialized.
+2024-08-16 11:24:37.6502 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:25:49.3127 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:25:49.3200 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:25:49.3200 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:25:49.3200 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:25:49.3386 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:25:49.3386 Info Configuration initialized.
+2024-08-16 11:25:49.6043 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:00.7112 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:26:00.7183 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:26:00.7183 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:26:00.7267 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:26:00.7267 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:00.7447 Info Configuration initialized.
+2024-08-16 11:26:00.9965 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:19.6925 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:26:19.7006 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:26:19.7006 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:26:19.7006 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:26:19.7267 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:19.7267 Info Configuration initialized.
+2024-08-16 11:26:19.9855 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:38.2428 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:26:38.2502 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:26:38.2502 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:26:38.2572 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:26:38.2572 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:26:38.2772 Info Configuration initialized.
+2024-08-16 11:26:38.5241 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:00.3820 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:27:00.3930 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:27:00.3930 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:27:00.4041 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:27:00.4197 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:00.4197 Info Configuration initialized.
+2024-08-16 11:27:00.6654 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:11.9989 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:27:11.9989 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:27:11.9989 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:27:12.0129 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:27:12.0242 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:12.0242 Info Configuration initialized.
+2024-08-16 11:27:12.2947 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:23.4161 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:27:23.4237 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:27:23.4237 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:27:23.4324 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:27:23.4442 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:23.4442 Info Configuration initialized.
+2024-08-16 11:27:23.7152 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:39.8939 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:27:39.9007 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:27:39.9007 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:27:39.9007 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:27:39.9193 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:39.9193 Info Configuration initialized.
+2024-08-16 11:27:40.1467 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:58.8549 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:27:58.8549 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:27:58.8549 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:27:58.8697 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:27:58.8845 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:27:58.8845 Info Configuration initialized.
+2024-08-16 11:27:59.1353 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:33:27.2598 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:33:27.2669 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:33:27.2669 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:33:27.2747 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:33:27.2747 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:33:27.2933 Info Configuration initialized.
+2024-08-16 11:33:27.5544 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:41:39.9573 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-08-16 11:41:39.9677 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-08-16 11:41:39.9677 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-08-16 11:41:39.9762 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-16 11:41:39.9762 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config
+2024-08-16 11:41:39.9982 Info Configuration initialized.
+2024-08-16 11:41:40.2398 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Development\WhiskersWondersPets\WhiskersWondersPets\bin\Debug\net8.0\NLog.config

@@ -1,14 +1,11 @@
 ﻿@model WhiskersWondersPets.Models.Animal
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
 
 
 <html>
     <head>
-       @*  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" /> *@
+
     </head>
+
     <body>
         <div class="mb-1 mt-24 mx-auto max-w-2xl text-center">
             <h1 class="text-gray-900 text-4xl font-bold tracking-tight sm:text-6xl">Add a new animal</h1>
@@ -72,76 +69,69 @@
         </form>
 
         <div>
-        <div class="mt-10">
-            <form asp-controller="Admin" asp-action="Index" method="get" class="max-h-12 gap-6 mx-auto flex max-w-xl flex-row place-items-center">
-                <h1 class="mb-2 text-gray-900 basis-1/2 text-center text-3xl dark:text-gray-700">Search by Category</h1>
-                <select name="CategoryNumber" class="bg-gray-50 border-gray-300 text-gray-900 p-2.5 block w-full basis-1/3 rounded-lg border text-6xl text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    @{
-                        // int categoryLength = ViewBag.CategoriesListLength;
-                        var CategoryNumber = ViewBag.CategoryNumber;
-                    }
-
-                    @for (int i = 0; i < (int)ViewBag.CategoriesListLength; i++)
-                    {
-                        if (CategoryNumber.Equals(ViewBag.CategoriesList[i].CategoryId))
-                        {
-                            <option value="@ViewBag.CategoriesList[i].CategoryId" selected>@ViewBag.CategoriesList[i].Name</option>
-                        }
-                        else
-                        {
-                            <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
-                        }
-                    }
-                </select>
-                <button as type="submit" class="text-white bg-blue-700 px-6 py-3 basis-1/6 rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-            </form>
-        </div>
-        <div class="mt-12 gap-6 relative grid grid-cols-1 items-center justify-center justify-items-center sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-16 xl:px-64 2xl:pg-128 mg:px-8">
-
-
-            @for (int i = 0; i < ViewBag.animalListLength; i++)
-            {
-                <div class="bg-white border-gray-200 mb-12 max-w-sm rounded-lg border shadow shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="rounded-t-lg" src="@ViewBag.AnimalsList[i].PictureName" alt="" />
-                    </a>
-                    <div class="p-5">
-                        <a href="#">
-                            <h5 class="mb-2 text-gray-900 text-2xl font-bold tracking-tight dark:text-white">@ViewBag.AnimalsList[i].Name</h5>
-                        </a>
+            <div class="mt-10">
+                <form asp-controller="Admin" asp-action="Index" method="get" class="max-h-12 gap-6 mx-auto flex max-w-xl flex-row place-items-center">
+                    <h1 class="mb-2 text-gray-900 basis-1/2 text-center text-3xl dark:text-gray-700">Search by Category</h1>
+                    <select name="CategoryNumber" class="bg-gray-50 border-gray-300 text-gray-900 p-2.5 block w-full basis-1/3 rounded-lg border text-6xl text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         @{
-                            string Desc = ViewBag.AnimalsList[i].Description;
-                            @if (Desc.Length < 255)
+                            // int categoryLength = ViewBag.CategoriesListLength;
+                            var CategoryNumber = ViewBag.CategoryNumber;
+                        }
+
+                        @for (int i = 0; i < (int)ViewBag.CategoriesListLength; i++)
+                        {
+                            if (CategoryNumber.Equals(ViewBag.CategoriesList[i].CategoryId))
                             {
-                                <p class="mb-3 text-gray-700 font-normal dark:text-gray-400">@ViewBag.AnimalsList[i].Description</p>
+                                <option value="@ViewBag.CategoriesList[i].CategoryId" selected>@ViewBag.CategoriesList[i].Name</option>
                             }
                             else
                             {
-                                string DescSubstring = Desc.Substring(0, 255);
-                                <p class="mb-3 text-gray-700 font-normal dark:text-gray-400">@DescSubstring...</p>
+                                <option value="@ViewBag.CategoriesList[i].CategoryId">@ViewBag.CategoriesList[i].Name</option>
                             }
-
                         }
-                        <a asp-action="Animal" asp-route-id="@ViewBag.AnimalsList[i].AnimalId" class="px-3 py-2 text-white bg-blue-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Edit profile
-                            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </a>
-                        <a id="deleteAction" onclick="deleteAnimal(@ViewBag.AnimalsList[i].AnimalId)" class="px-3 py-2 text-white bg-red-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-                            Delete Animal
-                            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </a>
+                    </select>
+                    <button as type="submit" class="text-white bg-blue-700 px-6 py-3 basis-1/6 rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                </form>
+            </div>
+            <div class="mt-12 gap-6 relative grid grid-cols-1 items-center justify-center justify-items-center sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-16 xl:px-64 2xl:pg-128 mg:px-8">
+
+
+                @for (int i = 0; i < ViewBag.animalListLength; i++)
+                {
+                    <div class="mb-12 bg-gray-800 border-gray-700 max-w-sm rounded-lg border shadow shadow-md">
+                        <img class="rounded-t-lg" src="@ViewBag.AnimalsList[i].PictureName" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-white text-2xl font-bold tracking-tight">@ViewBag.AnimalsList[i].Name</h5>
+                            @{
+                                string Desc = ViewBag.AnimalsList[i].Description;
+                                @if (Desc.Length < 255)
+                                {
+                                    <p class="mb-3 text-gray-400 font-normal">@ViewBag.AnimalsList[i].Description</p>
+                                }
+                                else
+                                {
+                                    string DescSubstring = Desc.Substring(0, 255);
+                                    <p class="mb-3 text-gray-400 font-normal">@DescSubstring...</p>
+                                }
+                            }
+                            <a asp-action="Animal" asp-route-id="@ViewBag.AnimalsList[i].AnimalId" class="px-3 py-2 text-white bg-blue-600 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800">
+                                Edit profile
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                            <a id="deleteAction" onclick="deleteAnimal(@ViewBag.AnimalsList[i].AnimalId)" class="px-3 py-2 text-white bg-red-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                                Delete Animal
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            }
-        </div>
+                }
+            </div>
         </div>
 
-        <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
-        @* <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script> *@
         <script src="~/scripts/AnimalCreate.js"></script>
         <script src="~/scripts/DeleteAnimal.js"></script>
     </body>

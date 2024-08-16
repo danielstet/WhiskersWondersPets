@@ -1,9 +1,4 @@
 ﻿
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 <html>
     <head>
 
@@ -36,28 +31,23 @@
 
         @for (int i = 0; i < ViewBag.animalListLength; i++)
         {
-            <div class="bg-white border-gray-200 mb-12 max-w-sm rounded-lg border shadow shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="@ViewBag.AnimalsList[i].PictureName" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-gray-900 text-2xl font-bold tracking-tight dark:text-white">@ViewBag.AnimalsList[i].Name</h5>
-                    </a>
+            <div class="mb-12 bg-gray-800 border-gray-700 max-w-sm rounded-lg border shadow shadow-md">
+                <img class="rounded-t-lg" src="@ViewBag.AnimalsList[i].PictureName" alt="" />
+                <div class="p-5">    
+                <h5 class="mb-2 text-white text-2xl font-bold tracking-tight">@ViewBag.AnimalsList[i].Name</h5>
                     @{
                         string Desc = ViewBag.AnimalsList[i].Description;
                         @if (Desc.Length < 255)
                         {
-                            <p class="mb-3 text-gray-700 font-normal dark:text-gray-400">@ViewBag.AnimalsList[i].Description</p>
+                            <p class="mb-3 text-gray-400 font-normal">@ViewBag.AnimalsList[i].Description</p>
                         }
                         else
                         {
                             string DescSubstring = Desc.Substring(0,255);                            
-                            <p class="mb-3 text-gray-700 font-normal dark:text-gray-400">@DescSubstring...</p>
+                            <p class="mb-3 text-gray-400 font-normal">@DescSubstring...</p>
                         }
-
                     }
-                    <a asp-action="Animal" asp-route-id="@ViewBag.AnimalsList[i].AnimalId" class="px-3 py-2 text-white bg-blue-700 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a asp-action="Animal" asp-route-id="@ViewBag.AnimalsList[i].AnimalId" class="px-3 py-2 text-white bg-blue-600 inline-flex items-center rounded-lg text-center text-sm font-medium hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800">
                         Enter profile
                         <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -67,7 +57,6 @@
             </div>
         }
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
     </body>
 </html>
 

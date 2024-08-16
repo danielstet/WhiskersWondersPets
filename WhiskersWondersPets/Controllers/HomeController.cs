@@ -37,5 +37,10 @@ namespace WhiskersWondersPets.Controllers
             }            
         }
 
+        public IActionResult UnderDevelopment() { 
+            return View();
+        }
     }
+
+    
 }

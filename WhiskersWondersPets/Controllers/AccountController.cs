@@ -54,7 +54,7 @@ namespace WhiskersWondersPets.Controllers
             if (!authenticateResult.Succeeded)
             {
                 // Handle authentication failure
-                return Unauthorized();
+                return RedirectToAction("AccessDenied");
             }
 
             // Check for claims
@@ -66,8 +66,7 @@ namespace WhiskersWondersPets.Controllers
                 claim.Value
             });
 
-            //return Json(claims);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("UnderDevelopment", "Home");
         }
 
         public IActionResult Logout()
@@ -80,5 +79,6 @@ namespace WhiskersWondersPets.Controllers
         public IActionResult AccessDenied() {
             return View();
         }
+
     }
 }

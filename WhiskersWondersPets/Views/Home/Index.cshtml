@@ -1,10 +1,4 @@
 ﻿
-
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 <html>
     <head>
         <meta name="viewport" content="width=device-width" />
@@ -18,7 +12,7 @@
                 <h1 class="text-gray-900 text-4xl font-bold tracking-tight sm:text-6xl">Welcome to Whisker's Wonders Petshop</h1>
                 <p class="mt-6 text-gray-600 text-lg leading-8">An non profit animal shelter and a pet store, and a wonderful home for any kind of animal! come and join us to find a fairy pet to bring home today</p>
                 <div class="mt-10 gap-x-6 flex items-center justify-center">
-                    <a href="#" class="bg-blue-700 px-3.5 py-2.5 text-white rounded-md text-sm font-semibold shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Find a friend</a>
+                    <a asp-action="Index" asp-controller="Catalog" class="bg-blue-700 px-3.5 py-2.5 text-white rounded-md text-sm font-semibold shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Find a friend</a>
                     <a href="#" class="text-gray-900 text-sm font-semibold leading-6">Contact info <span aria-hidden="true">→</span></a>
                 </div>
             </div>
@@ -117,7 +111,5 @@
             <h1 class="text-gray-900 mb-6 text-6xl font-bold tracking-tight">Our Location</h1>
             <iframe class="rounded-lg" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1703.4988969286644!2d-118.04935621757178!3d33.94094460903795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1722061490602!5m2!1sen!2sil" width="1280" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
-        <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
     </body>
 </html>
