@@ -48,6 +48,7 @@ try
     }).AddCookie()
       .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
       {
+          options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
           options.ClientId = builder.Configuration["GoogleKeys:ClientId"]!;
           options.ClientSecret = builder.Configuration["GoogleKeys:ClientSecret"]!;
       });

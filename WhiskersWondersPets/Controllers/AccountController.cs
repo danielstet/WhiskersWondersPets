@@ -40,10 +40,10 @@ namespace WhiskersWondersPets.Controllers
         public async Task GoogleLogin()
         {
             await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme,
-                new AuthenticationProperties
-                {
-                    RedirectUri = Url.Action("GoogleResponse")
-                });
+            new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleResponse")
+            });
         }
 
         public async Task<IActionResult> GoogleResponse()
@@ -66,8 +66,8 @@ namespace WhiskersWondersPets.Controllers
                 claim.Value
             });
 
-            // Return claims as JSON
-            return Json(claims);
+            //return Json(claims);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Logout()
@@ -76,7 +76,7 @@ namespace WhiskersWondersPets.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        // TODO create View page like 404
+        
         public IActionResult AccessDenied() {
             return View();
         }
