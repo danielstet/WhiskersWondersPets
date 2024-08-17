@@ -33,14 +33,6 @@ try
     builder.Services.AddScoped<IRepository, AnimalsRepo>();
     builder.Services.AddControllersWithViews();
 
-    //builder.Services.AddSession(options =>
-    //{
-    //    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set the timeout duration
-    //    options.Cookie.HttpOnly = true; // Set the cookie to be HttpOnly
-    //    options.Cookie.IsEssential = true; // Make the session cookie essential
-    //});
-
-    // Add google auth services
     builder.Services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -79,7 +71,6 @@ try
     app.UseStaticFiles();
     app.UseRouting();
     app.UseAuthorization();
-    //app.UseSession();
     app.MapControllerRoute("Default", "{controller=Home}/{action=index}");
 
 

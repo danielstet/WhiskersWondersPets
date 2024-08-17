@@ -1,0 +1,21 @@
+This the summary and notes that I made for the project
+
+-- Bonus Features --
+1) Login system (Authorizatiuon and Identities)
+2) NLog implemintation
+3) Sweet Alert (Like toast popups)
+4) I tried to implement Auth02, couldnt really get it, most likely because of lack of understaing how Identites works under the hood
+5) Unit testing with Moq FrameWork
+
+
+-- Additional Technologies --
+
+Front End:
+Tailwind (CDN) - for css instead of BootStrap
+SweetAlert2 - for toast pop ups
+
+BackEnd:
+Nlog - for logs
+Auth02 - Doesn't work Yet
+Identities - For Authorization and Authentication
+Moq Framework - For unit testing

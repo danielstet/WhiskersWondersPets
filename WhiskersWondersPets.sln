@@ -5,7 +5,12 @@ VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhiskersWondersPets", "WhiskersWondersPets\WhiskersWondersPets.csproj", "{D458E1F3-ABF9-4C92-8CFA-635159986AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiskersWonders-UnitTesting", "WhiskersWonders-UnitTesting\WhiskersWonders-UnitTesting.csproj", "{9687A42D-128A-4533-8AB2-20CA3A6BFEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhiskersWonders-UnitTesting", "WhiskersWonders-UnitTesting\WhiskersWonders-UnitTesting.csproj", "{9687A42D-128A-4533-8AB2-20CA3A6BFEFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9AE0FC93-1C98-4120-A9AA-19982E7C5062}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
